@@ -1,48 +1,110 @@
-import { Bug, Rat, Zap, Home, Leaf, Shield, Star, Users, Award, UserCheck } from "lucide-react";
+import { Bug, Rat, Zap, Home, Leaf, Shield, Star, Users, Award, UserCheck, Wind, Cloud, Trees, Hexagon, Skull, Search } from "lucide-react";
 
 const Services = () => {
   const services = [
     {
-      icon: Bug,
-      name: "Cockroach Control",
-      description: "Complete elimination of cockroach infestations with safe, long-lasting treatments.",
-      color: "orange",
-    },
-    {
       icon: Home,
-      name: "Termite Treatment",
-      description: "Protect your property from destructive termites with our advanced solutions.",
+      name: "TTPO – Termite Treatment",
+      subName: "(Post-Construction)",
+      description: "Protect your property from termites after construction with advanced, long-lasting chemical barriers.",
       color: "green",
     },
     {
-      icon: Zap,
-      name: "Mosquito Control",
-      description: "Effective mosquito management for a safer, bite-free environment.",
+      icon: Home,
+      name: "TTPR – Termite Treatment",
+      subName: "(Pre-Construction)",
+      description: "Prevent termite damage before it starts with preventive soil treatment during construction.",
+      color: "green",
+    },
+    {
+      icon: Bug,
+      name: "Cockroach Control Service",
+      description: "Get rid of cockroaches permanently with safe, odorless treatments and long-lasting protection.",
       color: "orange",
     },
     {
       icon: Rat,
-      name: "Rodent Control",
-      description: "Humane and effective solutions to eliminate rats and mice from your space.",
+      name: "Rodent Control Service",
+      description: "Eliminate rats and mice effectively with humane methods and secure, long-term prevention.",
+      color: "orange",
+    },
+    {
+      icon: Bug,
+      name: "Ant Control Service",
+      description: "Stop ant infestations at the source with targeted treatments and lasting control.",
       color: "green",
     },
     {
       icon: Leaf,
-      name: "Bed Bug Treatment",
-      description: "Thorough bed bug extermination for peaceful, restful sleep.",
+      name: "Bed Bug Control Service",
+      description: "Remove bed bugs completely with professional treatment for peaceful, bite-free sleep.",
+      color: "orange",
+    },
+    {
+      icon: Zap,
+      name: "General Pest Control",
+      description: "Comprehensive pest control solutions to keep your home and workplace safe and hygienic.",
+      color: "green",
+    },
+    {
+      icon: Search,
+      name: "Deep Pest Control",
+      description: "Intensive deep pest control to eliminate hidden infestations and ensure complete protection.",
       color: "orange",
     },
     {
       icon: Shield,
-      name: "Ant Control",
-      description: "Stop ant invasions at the source with our targeted treatments.",
+      name: "Snake Control Service",
+      description: "Safe and expert snake control to protect your family and property without harm.",
       color: "green",
+    },
+    {
+      icon: Cloud,
+      name: "Thermal Fogging",
+      description: "Advanced thermal fogging to control mosquitoes and flying insects even in hard-to-reach areas.",
+      color: "orange",
+    },
+    {
+      icon: Wind,
+      name: "Mist Fogging",
+      description: "Fine mist fogging treatment for effective control of mosquitoes and airborne pests.",
+      color: "green",
+    },
+    {
+      icon: Bug,
+      name: "Lizard Control Service",
+      description: "Effective lizard control solutions to keep your home clean, safe, and lizard-free.",
+      color: "orange",
+    },
+    {
+      icon: Zap,
+      name: "Flies Control Service",
+      description: "Control flies efficiently to maintain a hygienic, disease-free environment.",
+      color: "green",
+    },
+    {
+      icon: Bug,
+      name: "Wood Borer Service",
+      description: "Protect wooden furniture and structures from damage with specialized wood borer treatment.",
+      color: "orange",
+    },
+    {
+      icon: Trees,
+      name: "Termite Control in Trees",
+      description: "Targeted termite treatment to protect trees and prevent spread to nearby structures.",
+      color: "green",
+    },
+    {
+      icon: Hexagon,
+      name: "Beehive Removal",
+      description: "Safe and professional beehive removal without harming people or surrounding property.",
+      color: "orange",
     },
   ];
 
   const trustFeatures = [
     { icon: Star, text: "4.9/5 Google Rating" },
-    { icon: Users, text: "1000+ Homes Served" },
+    { icon: Users, text: "10,000+ Families Served" },
     { icon: Award, text: "Government Approved Chemicals" },
     { icon: UserCheck, text: "Trained & Verified Staff" },
   ];
@@ -65,37 +127,28 @@ const Services = () => {
         </div>
 
         {/* Services Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           {services.map((service, index) => (
             <div
               key={service.name}
-              className="card-service group"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              className="card-service group h-full flex flex-col justify-between"
+              style={{ animationDelay: `${index * 0.05}s` }}
             >
-              <div
-                className={`${service.color === "orange" ? "icon-circle-orange" : "icon-circle"
-                  } mb-4 group-hover:scale-110 transition-transform duration-300`}
-              >
-                <service.icon className="w-7 h-7" />
+              <div>
+                <div
+                  className={`${service.color === "orange" ? "icon-circle-orange" : "icon-circle"
+                    } mb-4 group-hover:scale-110 transition-transform duration-300`}
+                >
+                  <service.icon className="w-7 h-7" />
+                </div>
+                <h3 className="font-heading text-lg font-bold text-foreground mb-2">
+                  {service.name}
+                  {service.subName && (
+                    <span className="block text-sm text-secondary mt-1">{service.subName}</span>
+                  )}
+                </h3>
+                <p className="text-sm text-muted-foreground line-clamp-3">{service.description}</p>
               </div>
-              <h3 className="font-heading text-xl font-bold text-foreground mb-2">
-                {service.name}
-              </h3>
-              <p className="text-muted-foreground">{service.description}</p>
-            </div>
-          ))}
-        </div>
-
-        {/* Trust Features Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
-          {trustFeatures.map((feature) => (
-            <div key={feature.text} className="flex flex-col items-center p-4 bg-background rounded-xl border border-border shadow-sm text-center group hover:border-secondary/50 transition-colors">
-              <div className="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
-                <feature.icon className="w-5 h-5 text-secondary" />
-              </div>
-              <p className="text-sm font-bold text-foreground leading-tight">
-                {feature.text}
-              </p>
             </div>
           ))}
         </div>

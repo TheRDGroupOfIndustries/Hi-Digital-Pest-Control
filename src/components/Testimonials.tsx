@@ -1,4 +1,5 @@
-import { Star, Quote } from "lucide-react";
+import { Star, Quote, Users, Award, UserCheck } from "lucide-react";
+
 
 const Testimonials = () => {
   const testimonials = [
@@ -30,6 +31,13 @@ const Testimonials = () => {
       text: "Our restaurant was facing rodent issues. They provided quick and discreet service. No more problems since then!",
       service: "Rodent Control",
     },
+  ];
+
+   const trustFeatures = [
+    { icon: Star, text: "4.9/5 Google Rating" },
+    { icon: Users, text: "10,000+ Families Served" },
+    { icon: Award, text: "Government Approved Chemicals" },
+    { icon: UserCheck, text: "Trained & Verified Staff" },
   ];
 
   return (
@@ -94,20 +102,18 @@ const Testimonials = () => {
         </div>
 
         {/* Trust Badge */}
-        <div className="mt-12 text-center">
-          <div className="inline-flex items-center gap-3 px-6 py-3 bg-muted rounded-full">
-            <div className="flex -space-x-2">
-              {[...Array(5)].map((_, i) => (
-                <Star
-                  key={i}
-                  className="w-5 h-5 fill-primary text-primary"
-                />
-              ))}
+        {/* Trust Features Grid */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+          {trustFeatures.map((feature) => (
+            <div key={feature.text} className="flex flex-col items-center p-4 bg-background rounded-xl border border-border shadow-sm text-center group hover:border-secondary/50 transition-colors">
+              <div className="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
+                <feature.icon className="w-5 h-5 text-secondary" />
+              </div>
+              <p className="text-sm font-bold text-foreground leading-tight">
+                {feature.text}
+              </p>
             </div>
-            <span className="text-foreground font-medium">
-              4.9/5 Rating from 500+ Reviews
-            </span>
-          </div>
+          ))}
         </div>
       </div>
     </section>

@@ -1,14 +1,14 @@
-import { Shield, MapPin, Phone } from "lucide-react";
+import {MapPin, Phone, Clock } from "lucide-react";
 
 const Footer = () => {
   return (
     <footer className="bg-card border-t border-border">
       <div className="container-custom py-12 md:py-16">
-        <div className="grid md:grid-cols-3 gap-10 md:gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-8">
           {/* Brand */}
           <div>
             <a href="/" className="inline-block mb-4">
-              <div className="w-24 h-24 md:w-32 md:h-32 rounded-lg overflow-hidden flex items-center justify-center bg-transparent">
+              <div className="w-16 h-16 md:w-16 md:h-16 rounded-lg overflow-hidden flex items-center justify-center bg-transparent">
                 <img src="/logo.png" alt="Hi Digital Pest Control Logo" className="w-full h-full object-contain" />
               </div>
             </a>
@@ -58,6 +58,22 @@ const Footer = () => {
                 <Phone className="w-4 h-4 text-secondary" />
                 +91 6393531161
               </a>
+            </div>
+          </div>
+
+          {/* Working Hours */}
+          <div>
+            <h3 className="font-heading font-bold text-foreground mb-4">
+              Business Hours
+            </h3>
+            <div className="space-y-2">
+              <div className="flex items-center gap-2 text-muted-foreground">
+                <Clock className="w-4 h-4 text-primary" />
+                <span>Mon – Sun: 9 am – 5 pm</span>
+              </div>
+              <p className="text-xs text-muted-foreground mt-2 italic">
+                *Open all 7 days for your convenience
+              </p>
             </div>
           </div>
 
