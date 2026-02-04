@@ -23,19 +23,39 @@ const Hero = () => {
           <div className="text-center lg:text-left">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-100 text-green-700 text-sm font-medium mb-6">
               <CheckCircle2 className="w-4 h-4" />
-              Trusted by 1000+ Families in Varanasi
+              Trusted by 10,000+ Families & Businesses in Varanasi
             </div>
 
             <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-extrabold text-foreground leading-tight mb-6">
-              Your Trusted{" "}
+              Varanasi’s Most Trusted{" "}
               <span className="gradient-text">Pest Control</span>{" "}
-              Specialists
+              Experts
             </h1>
 
             <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-xl mx-auto lg:mx-0">
               Safe, effective, and professional pest control services for homes
               & businesses. Get rid of pests with our eco-friendly solutions.
             </p>
+
+            {/* Pests we handle */}
+            <div className="flex flex-wrap justify-center lg:justify-start gap-3 mb-8">
+              {[
+                { name: "Ants", emoji: "🐜" },
+                { name: "Cockroaches", emoji: "🪳" },
+                { name: "Mosquitoes", emoji: "🦟" },
+                { name: "Rodents", emoji: "🐀" },
+                { name: "Termites", emoji: "🐜" },
+                { name: "Bed Bugs", emoji: "🛏" },
+              ].map((pest) => (
+                <div
+                  key={pest.name}
+                  className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-card border border-border text-sm font-medium hover:border-primary/50 transition-colors shadow-sm"
+                >
+                  <span className="text-lg">{pest.emoji}</span>
+                  <span>{pest.name}</span>
+                </div>
+              ))}
+            </div>
 
             {/* Benefits */}
             <div className="flex flex-wrap justify-center lg:justify-start gap-4 mb-8">
@@ -69,30 +89,18 @@ const Hero = () => {
               {/* Clean Home Illustration */}
               <div className="absolute inset-0 bg-gradient-to-br from-green-100 to-green-50 rounded-3xl rotate-3 transform" />
               <div className="absolute inset-0 bg-card rounded-3xl shadow-lg -rotate-3 transform overflow-hidden border border-border">
-                <div className="absolute inset-0 flex items-center justify-center p-8">
-                  <div className="text-center">
-                    <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-green-100 flex items-center justify-center animate-float">
-                      <svg
-                        className="w-16 h-16 text-green-600"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
-                        />
-                      </svg>
-                    </div>
-                    <h3 className="font-heading text-2xl font-bold text-foreground mb-2">
-                      100% Pest Free
-                    </h3>
-                    <p className="text-muted-foreground">
-                      Guaranteed Protection
-                    </p>
-                  </div>
+                <img
+                  src="/technician.png"
+                  alt="Technician Spraying"
+                  className="w-full h-full object-cover p-2 rounded-3xl"
+                />
+                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-background/90 to-transparent p-6 pt-12">
+                  <h3 className="font-heading text-xl font-bold text-foreground">
+                    100% Pest Free
+                  </h3>
+                  <p className="text-sm text-muted-foreground">
+                    Guaranteed Protection
+                  </p>
                 </div>
               </div>
 

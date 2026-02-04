@@ -36,8 +36,13 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* CTA Button */}
-          <div className="hidden md:block">
+          {/* BNI Logo & CTA Button */}
+          <div className="hidden md:flex items-center gap-6">
+            <img
+              src="/BNI-logo.png"
+              alt="BNI Member"
+              className="h-10 w-auto opacity-90 hover:opacity-100 transition-opacity"
+            />
             <a
               href="tel:+918707751161"
               className="btn-primary text-sm"
