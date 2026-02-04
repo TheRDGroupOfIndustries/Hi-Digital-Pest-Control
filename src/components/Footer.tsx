@@ -20,10 +20,30 @@ const Footer = () => {
                 </span>
               </div>
             </div>
-            <p className="text-muted-foreground">
+            <p className="text-muted-foreground mb-4">
               Your trusted pest control specialists in Varanasi. Safe, effective,
               and professional services.
             </p>
+            <div className="flex gap-3">
+              <a
+                href="https://www.facebook.com/hidigitalpestcontrolservice"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 rounded-lg bg-muted flex items-center justify-center text-muted-foreground hover:bg-primary/10 hover:text-primary transition-colors"
+                title="Facebook"
+              >
+                <i className="ri-facebook-line text-lg"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/hi_digital_pest_control"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 rounded-lg bg-muted flex items-center justify-center text-muted-foreground hover:bg-primary/10 hover:text-primary transition-colors"
+                title="Instagram"
+              >
+                <i className="ri-instagram-line text-lg"></i>
+              </a>
+            </div>
           </div>
 
           {/* Contact Info */}
