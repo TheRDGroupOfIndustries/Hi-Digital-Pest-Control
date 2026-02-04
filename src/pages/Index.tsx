@@ -10,6 +10,7 @@ import LocalTrust from "@/components/LocalTrust";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import StickyCTA from "@/components/StickyCTA";
+import WhatsAppFloatingButton from "@/components/components/WhatsAppFloatingButton";
 
 const Index = () => {
   return (
@@ -28,6 +29,7 @@ const Index = () => {
       </main>
       <Footer />
       <StickyCTA />
+      <WhatsAppFloatingButton />
     </div>
   );
 };

@@ -182,3 +182,7 @@
     50% { opacity: 0.8; }
   }
 }
+
+*{
+  scroll-behavior: smooth;
+}
