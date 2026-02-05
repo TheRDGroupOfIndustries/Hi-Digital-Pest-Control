@@ -20,7 +20,7 @@ const Contact = () => {
           {/* Contact Cards */}
           <div className="grid sm:grid-cols-2 gap-8 mb-12">
             <a
-              href="tel:+918707751161"
+              href="tel:+916393541161"
               className="group relative flex items-center justify-center gap-6 bg-white rounded-3xl p-8 shadow-[0_10px_40px_-15px_rgba(0,0,0,0.1)] border border-border/50 hover:border-primary/50 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
             >
               <div className="icon-circle-orange w-16 h-16 rounded-2xl group-hover:scale-110 transition-transform duration-300 shadow-orange-100 shadow-lg">
@@ -29,7 +29,7 @@ const Contact = () => {
               <div className="text-left">
                 <p className="text-xs uppercase tracking-wider font-semibold text-muted-foreground mb-1">Direct Line</p>
                 <p className="font-heading text-2xl font-bold text-foreground">
-                  +91 8707751161
+                  +91 6393541161
                 </p>
               </div>
             </a>
