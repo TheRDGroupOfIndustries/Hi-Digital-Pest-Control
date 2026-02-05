@@ -2,7 +2,7 @@ import { Phone, MessageCircle } from "lucide-react";
 
 const Contact = () => {
   return (
-    <section id="contact" className="section-padding bg-muted/30">
+    <section id="contact" className="section-padding bg-white">
       <div className="container-custom">
         <div className="max-w-4xl mx-auto text-center">
           {/* Section Header */}
@@ -12,23 +12,23 @@ const Contact = () => {
           <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
             Get Rid of Pests Today
           </h2>
-          <p className="text-lg text-muted-foreground mb-10">
+          <p className="text-lg text-muted-foreground mb-12">
             Don't let pests take over your home or business. Call us now for a
             free consultation and inspection!
           </p>
 
-          {/* Phone Numbers */}
-          <div className="grid sm:grid-cols-2 gap-6 mb-10">
+          {/* Contact Cards */}
+          <div className="grid sm:grid-cols-2 gap-8 mb-12">
             <a
               href="tel:+918707751161"
-              className="flex items-center justify-center gap-4 bg-card rounded-2xl p-6 shadow-lg border border-border hover:border-primary transition-colors group"
+              className="group relative flex items-center justify-center gap-6 bg-white rounded-3xl p-8 shadow-[0_10px_40px_-15px_rgba(0,0,0,0.1)] border border-border/50 hover:border-primary/50 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
             >
-              <div className="icon-circle-orange group-hover:scale-110 transition-transform">
-                <Phone className="w-6 h-6" />
+              <div className="icon-circle-orange w-16 h-16 rounded-2xl group-hover:scale-110 transition-transform duration-300 shadow-orange-100 shadow-lg">
+                <Phone className="w-7 h-7" />
               </div>
               <div className="text-left">
-                <p className="text-sm text-muted-foreground mb-1">Call us at</p>
-                <p className="font-heading text-xl font-bold text-foreground">
+                <p className="text-xs uppercase tracking-wider font-semibold text-muted-foreground mb-1">Direct Line</p>
+                <p className="font-heading text-2xl font-bold text-foreground">
                   +91 8707751161
                 </p>
               </div>
@@ -36,33 +36,33 @@ const Contact = () => {
 
             <a
               href="tel:+916393531161"
-              className="flex items-center justify-center gap-4 bg-card rounded-2xl p-6 shadow-lg border border-border hover:border-secondary transition-colors group"
+              className="group relative flex items-center justify-center gap-6 bg-white rounded-3xl p-8 shadow-[0_10px_40px_-15px_rgba(0,0,0,0.1)] border border-border/50 hover:border-secondary/50 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
             >
-              <div className="icon-circle group-hover:scale-110 transition-transform">
-                <Phone className="w-6 h-6" />
+              <div className="icon-circle w-16 h-16 rounded-2xl group-hover:scale-110 transition-transform duration-300 shadow-emerald-100 shadow-lg">
+                <Phone className="w-7 h-7" />
               </div>
               <div className="text-left">
-                <p className="text-sm text-muted-foreground mb-1">Or call us at</p>
-                <p className="font-heading text-xl font-bold text-foreground">
+                <p className="text-xs uppercase tracking-wider font-semibold text-muted-foreground mb-1">Support Line</p>
+                <p className="font-heading text-2xl font-bold text-foreground">
                   +91 6393531161
                 </p>
               </div>
             </a>
           </div>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:+918707751161" className="btn-primary text-lg px-10 py-5">
-              <Phone className="w-5 h-5" />
-              Call Us On
+          {/* Action Buttons */}
+          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+            <a href="tel:+918707751161" className="btn-primary text-xl px-12 py-6 rounded-2xl shadow-xl shadow-orange-200/50 hover:shadow-2xl hover:shadow-orange-300/60 transition-all">
+              <Phone className="w-6 h-6" />
+              Call Us Now
             </a>
             <a
               href="https://wa.me/918707751161"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-secondary text-lg px-10 py-5"
+              className="btn-secondary text-xl px-12 py-6 rounded-2xl shadow-xl shadow-emerald-100/50 hover:shadow-2xl hover:shadow-emerald-200/60 transition-all"
             >
-              <MessageCircle className="w-5 h-5" />
+              <MessageCircle className="w-6 h-6" />
               WhatsApp Us
             </a>
           </div>

@@ -84,16 +84,6 @@ const FAQ = () => {
             ))}
           </Accordion>
         </div>
-
-        {/* Still Have Questions */}
-        <div className="mt-12 text-center">
-          <p className="text-muted-foreground mb-4">
-            Still have questions? We're here to help!
-          </p>
-          <a href="tel:+918707751161" className="btn-primary">
-            Call Us Now
-          </a>
-        </div>
       </div>
     </section>
   );
