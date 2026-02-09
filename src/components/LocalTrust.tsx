@@ -1,7 +1,7 @@
 import { MapPin, Users, Clock } from "lucide-react";
 
 const LocalTrust = () => {
-  const locations = ["Ramnagar", "Lanka", "Varanasi"];
+  const locations = ["Mirzapur", "Varanasi", "Prayagraj", "Jaunpur", "Ghazipur", "Azamgarh", "Bhadohi"];
 
   return (
     <section className="section-padding bg-background">
