@@ -1,27 +1,25 @@
-import { useEffect } from "react";
-
 const Associations = () => {
     const associations = [
         {
             name: "BNI",
-            logo: "/logo/BNI.jpeg",
+            logo: "/BNI-logo.png",
         },
         {
             name: "JSK Foundation",
-            logo: "/logo/shri.jpeg",
+            logo: "/logo/shri.png",
         },
         {
             name: "IBF",
-            logo: "/logo/IBF.jpeg",
+            logo: "/logo/IBF.png",
         },
         {
             name: "Ramanagar Industrial Association",
-            logo: "/logo/ramnagar.jpeg",
+            logo: "/logo/ramnagar.png",
         },
     ];
 
     return (
-        <section className="py-10 bg-secondary/5 border-y border-secondary/10">
+        <section className="py-10">
             <div className="container-custom">
                 <div className="text-center mb-8">
                     <h3 className="text-lg font-semibold text-muted-foreground uppercase tracking-widest">
@@ -33,7 +31,7 @@ const Associations = () => {
                     {associations.map((item) => (
                         <div
                             key={item.name}
-                            className="group relative w-24 h-24 md:w-32 md:h-32 flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100"
+                            className="group relative w-24 h-24 md:w-32 md:h-32 flex items-center justify-center transition-all duration-300 hover:scale-110"
                         >
                             <img
                                 src={item.logo}
