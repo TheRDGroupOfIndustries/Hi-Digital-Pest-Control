@@ -1,4 +1,4 @@
-import {MapPin, Phone, Clock } from "lucide-react";
+import { MapPin, Phone, Clock } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -7,10 +7,13 @@ const Footer = () => {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-8">
           {/* Brand */}
           <div>
-            <a href="/" className="inline-block mb-4">
-              <div className="w-16 h-16 md:w-16 md:h-16 rounded-lg overflow-hidden flex items-center justify-center bg-transparent">
+            <a href="/" className="flex items-center gap-3 mb-4">
+              <div className="w-16 h-16 rounded-lg overflow-hidden flex items-center justify-center bg-transparent">
                 <img src="/logo.png" alt="Hi Digital Pest Control Logo" className="w-full h-full object-contain" />
               </div>
+              <span className="font-heading font-bold text-xl text-foreground">
+                Hi Digital<br />Pest Control
+              </span>
             </a>
             <p className="text-muted-foreground mb-4">
               Your trusted pest control specialists in Varanasi. Safe, effective,

@@ -17,10 +17,13 @@ const Header = () => {
       <div className="container-custom">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <a href="/" className="flex items-center">
-            <div className="w-16 h-16 md:w-20 md:h-20 rounded-lg overflow-hidden flex items-center justify-center">
+          <a href="/" className="flex items-center gap-3">
+            <div className="w-12 h-12 md:w-16 md:h-16 rounded-lg overflow-hidden flex items-center justify-center">
               <img src="/logo.png" alt="Hi Digital Pest Control Logo" className="w-full h-full object-contain" />
             </div>
+            <span className="font-heading font-bold text-lg md:text-xl text-primary hidden sm:block">
+              Hi Digital Pest Control
+            </span>
           </a>
 
           {/* Desktop Navigation */}
